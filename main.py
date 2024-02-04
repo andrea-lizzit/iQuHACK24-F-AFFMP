@@ -49,9 +49,9 @@ def get_CCZ():
     matrix = Matrix(matrix)
 
     def mzi(i):
-    return Circuit(2) // PS(P(f"phi_1_{i}")) // BS() // PS(P(f"phi_2_{i}")) // BS()
+        return Circuit(2) // PS(P(f"phi_1_{i}")) // BS() // PS(P(f"phi_2_{i}")) // BS()
     def ps(i):
-    return PS(P(f"phi_3_{i}"))
+        return PS(P(f"phi_3_{i}"))
 
     template = GenericInterferometer(6, mzi, phase_shifter_fun_gen=ps, phase_at_output=True)
 
